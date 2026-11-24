@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Didi 💕</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section id="lockScreen">
+        <div class="lock-card">
+            <h1>Hey Didi! 💗</h1>
+            <p>A little surprise is waiting for you...</p>
+
+            <input
+                type="password"
+                id="pinInput"
+                placeholder="Enter Secret PIN"
+                maxlength="4"
+            >
+
+            <button onclick="unlockWebsite()">
+                Open Your Surprise 🎁
+            </button>
+
+            <p id="error"></p>
+        </div>
+    </section>
+
+    <main id="mainWebsite">
+
+<!-- Birthday Music -->
+<div class="music-player">
+    <h3>🎵 Birthday Special Song</h3>
+
+    <audio controls loop>
+        <source src="birthday.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+    </audio>
+</div>
+
+
+        <section class="hero">
+            <p class="small-title">A SPECIAL DAY · 25 NOVEMBER</p>
+
+            <h1>Happy Birthday<br>Didi💕</h1>
+
+            <p>
+                Today is all about you.
+                A little world made with love! 💖
+            </p>
+
+            <button onclick="showSurprise()">
+                Start The Surprise ✨
+            </button>
+        </section>
+
+        <section class="content">
+            <h2>Our Beautiful Memories 📸</h2>
+
+            
+<div class="content memories-section">
+    <h2>Our Beautiful Memories 💕</h2>
+
+    <button onclick="openMemories()">
+        
+    </button>
+
+    <div id="memorySlideshow" style="display:none;">
+        <h3 id="memoryTitle">Memory 1 / 12 ❤️</h3>
+
+        <img id="memoryPhoto" src="memories/1.jpeg"
+             alt="Our beautiful memory">
+
+        <p id="memoryCaption">A beautiful moment together 💕</p>
+
+<div class="memory-progress">
+    <div id="memoryProgressBar"></div>
+    <div class="progress-container">
+    <div id="memoryProgressBar" class="progress-bar"></div>
+</div>
+</div>
+
+<p id="memoryCount">1 of 12 memories</p>
+ 
+<div id="finalSurprise" style="display:none;">
+    <h2>🎉 A Special Surprise For You 🎉</h2>
+
+    <div id="giftBox" onclick="openGift()">
+        🎁
+    </div>
+
+    <p>Click your gift, Didi! 💗</p>
+
+    <div id="giftMessage" style="display:none;">
+        <h1>I LOVE YOU DIDI! ❤️</h1>
+        <p>You are the most special person in my life.</p>
+        <h2>Happy Birthday! 🎂💕</h2>
+        <div class="floating-hearts">
+    <span>💗</span>
+    <span>💕</span>
+    <span>❤️</span>
+    <span>💖</span>
+    <span>💗</span>
+    <span>💝</span>
+    <button onclick="openLetter()" class="letterBtn">
+    💌 Open My Letter
+</button>
+
+<div id="birthdayLetter" style="display:none;">
+    <h2>Dear Didi 💗</h2>
+
+    <p>
+        You are not just my sister,
+        you are my happiness, my strength
+        and one of the biggest blessings
+        of my life.
+    </p>
+
+    <p>
+        Thank you for always being there.
+        May your life always be filled
+        with happiness, love and beautiful memories.
+    </p>
+
+    <h3>Stay Happy Always! ❤️</h3>
+
+    <h2>From Your Brother 💕</h2>
+</div>
+</div>
+    </div>
+</div>
+<div class="memory-buttons">
+    <button onclick="previousMemory()">❮ Previous</button>
+    <button onclick="nextMemory()">Next ❯</button>
+    <button onclick="closeMemories()">Close ✕</button>
+</div>
+
+<div id="birthdayCake">
+    <h2>Make a Wish, Didi! 💗</h2>
+
+    <div class="cake">
+        <div class="candles">
+            <span class="flame" id="flame1">🔥</span>
+            <span class="flame" id="flame2">🔥</span>
+            <span class="flame" id="flame3">🔥</span>
+        </div>
+
+        <div class="candle-row">
+            <span>🕯️</span>
+            <span>🕯️</span>
+            <span>🕯️</span>
+        </div>
+
+        <div class="cake-top"></div>
+        <div class="cake-bottom"></div>
+    </div>
+
+    <button onclick="blowCandles()">
+        Blow Candles 💨
+    </button>
+
+    <h2 id="cakeWish" style="display:none;">
+        Happy Birthday Didi! 🎉💕
+        <p>May all your dreams come true! ❤️</p>
+    </h2>
+</div>
+<div id="loveGame">
+    <h2>One Special Question! 💗</h2>
+
+    <h3>How much do you love your brother? 🥹</h3>
+
+    <button onclick="loveAnswer()">
+        Infinite Times! ❤️
+    </button>
+
+    <p id="loveAnswerText" style="display:none;">
+        Awww! 🥹❤️
+        You are my forever favourite Didi!
+        Lots of love! 💕
+    </p>
+
+</div>
+
+        </section>
+
+        <section class="content">
+            <h2>Make A Birthday Wish 🎂</h2>
+
+            <div class="cake" id="cake">🎂</div>
+
+            <button onclick="cutCake()">
+                Cut Your Cake 💗
+            </button>
+
+            <p id="cakeMessage"></p>
+        </section>
+
+        <section class="content">
+            <h2>A Little Birthday Game 🎮</h2>
+
+            <p>Who is the luckiest sibling in the world?</p>
+
+            <button onclick="gameAnswer()">
+                ME! 😎
+            </button>
+
+            <p id="gameResult"></p>
+        </section>
+
+        <section class="content letter">
+            <h2>A Letter For You 💌</h2>
+
+            <p>
+Dear Didi,
+
+Happy Birthday! ❤️
+
+Thank you for always being there.
+You are one of the most special
+people in my life.
+
+May your life always be filled
+with happiness, love and success.
+
+Keep smiling and keep shining.
+
+Lots of love,
+Your Little Brother 💕
+            </p>
+        </section>
+
+        <footer>
+            Made with ❤️ for Didi💕
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
